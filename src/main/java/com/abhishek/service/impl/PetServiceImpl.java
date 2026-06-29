@@ -30,7 +30,7 @@ public class PetServiceImpl implements PetService {
 
     @Override
     public PetDTO findPet(Integer petId) {
-        ResponseEntity<PetDTO> response = restClient.post()
+        ResponseEntity<PetDTO> response = restClient.get()
                 .uri(petServiceUrl + "/{petId}", petId)
                 .retrieve()
                 .toEntity(PetDTO.class);
