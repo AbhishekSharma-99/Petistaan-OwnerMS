@@ -12,7 +12,7 @@ public interface OwnerMapper {
     @Mapping(source = "petDTO.id", target = "petId")
     Owner ownerDTOToOwner(OwnerDTO ownerDTO);
 
-    @Mapping(target = "petDTO.Id", ignore = true)
+    @Mapping(target = "petDTO", ignore = true)
     OwnerDTO ownerToOwnerDTO(Owner owner);
 
 }
